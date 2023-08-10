@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "poppins", "Times New Roman", Times, serif;
+    background: #111;
+    /* overflow: scroll; */
+}
+
+/* Navbar */
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0);
+}
+
+header nav button {
+    position: absolute;
+    opacity: 0;
+}
+
+header nav h1 {
+    color: white;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 3px black, 0px 0px 6px black, 0px 0px 8px black;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    font-style: none;
+    list-style: none;
+    margin: 0rem 1rem;
+}
+
+header nav ul li .link_navbar {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+
+header nav ul li .link_navbar::before {
+    content: " ";
+    position: absolute;
+    background: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+    transform: scaleX(0);
+    transition: 0.4s all ease-in-out;
+}
+
+header nav ul li a:hover.link_navbar::before {
+    transform: scaleX(0.5);
+}
+
+/* main*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+main .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url(/assets/image/floraAndFauna.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+main .welcome h1 {
+    text-shadow: 0px 0px 5px black;
+    margin: 1rem 0rem;
+}
+
+main .welcome p {
+    text-shadow: 0px 0px 5px black, 0px 0px 8px black;
+    max-width: 700px;
+}
+
+main .welcome button {
+    cursor: pointer;
+    margin: 2rem 3rem;
+    width: 250px;
+    height: 50px;
+    border-radius: 15px 15px 15px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 0px 0px 3px black, 0px 0px 6px black, 0px 0px 9px black;
+    box-shadow: 3px 3px 8px black;
+    transition: 0.5s all ease-in-out;
+}
+
+main .welcome button:hover {
+    background: rgb(0, 255, 0);
+}
+
+main .introduce {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    width: 100%;
+    color: white;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+}
+
+main .introduce h1 {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+main .introduce img {
+    width: 100%;
+}
+
+main .introduce p {
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* content */
+main .content {
+    width: 60%;
+    box-sizing: border-box;
+}
+
+main .content .container {
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    background: #000;
+    color: white;
+    border-radius: 15px;
+}
+
+main .content .container h2 {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+main .content .container img {
+    position: relative;
+    margin: 1rem 0rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main .content .container p {
+    text-align: justify;
+    margin: 1rem;
+}
+
+/* aside */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+}
+
+aside .container-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    background: #000;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+}
+
+aside .container-side h3 {
+    display: flex;
+    margin: 1rem auto;
+    color: white;
+}
+
+aside .container-side .profil-img {
+    display: flex;
+    position: relative;
+    margin: 2rem auto;
+    max-width: 300px;
+}
+
+aside .container-side h4 {
+    display: flex;
+    margin: auto;
+    color: white;
+}
+
+aside .container-side p {
+    color: white;
+    padding: 2rem;
+}
+
+aside .container-side ul {
+    display: flex;
+    color: white;
+    margin: 1rem;
+}
+
+aside .container-side ul li {
+    list-style: none;
+    width: 200px;
+    /* border: 1px solid white; */
+}
+
+aside .container-side ul li a {
+    text-decoration: none;
+    color: blue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1000px) {
+    main .content {
+        width: 100%;
+    }
+
+    main aside {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header,
+    main {
+        font-size: 80%;
+    }
+
+    footer {
+        font-size: 70%;
+    }
+
+    header nav {
+        justify-content: space-between;
+        /* margin: 0rem 1rem; */
+    }
+    header nav h1 {
+        margin: 0rem 1rem;
+    }
+
+    header nav button {
+        position: relative;
+        background: #00000000;
+        border: none;
+        opacity: 1;
+    }
+
+    header nav img {
+        cursor: pointer;
+        color: white;
+        margin: 0rem 1rem;
+    }
+
+    header div {
+        display: flex;
+        top: 0;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 100%;
+    }
+
+    ul#hamburger-menu {
+        display: flex;
+        text-align: center;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        position: absolute;
+        background: #000000b4;
+        /* border: 1px solid red; */
+        height: 1px;
+        width: 100%;
+        height: 0%;
+        opacity: 1;
+        z-index: 99999;
+        overflow: hidden;
+        transition: 0.6s all ease-in-out;
+    }
+
+    ul#hamburger-menu.active {
+        height: 80vh;
+    }
+    ul#hamburger-menu li {
+        margin: 2rem;
+    }
+}
